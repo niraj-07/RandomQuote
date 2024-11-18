@@ -4,12 +4,12 @@ let author = document.querySelector(".author");
 
 function getQuote(){
     
-    fetch('https://api.quotable.io/random')
+    fetch('https://dummyjson.com/quotes/random')
     .then(response => response.json())
     .then(data => {
       console.log(data);
       console.log(data.content);
-      quote.textContent = data.content;
+      quote.textContent = data.quote;
       author.textContent ="--";
       author.textContent += data.author;
     })
